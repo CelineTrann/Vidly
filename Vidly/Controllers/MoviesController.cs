@@ -16,8 +16,8 @@ namespace Vidly.Controllers
             var movie = new Movie() { Name = "Shrek" };
             var customers = new List<Customer>
             {
-                new Customer { Name = "Customer 1"},
-                new Customer { Name = "Customer 2"}
+                new Customer { Name = "Customer 1" },
+                new Customer { Name = "Customer 2" }
             };
 
             var viewModel = new RandomMovieViewModel
@@ -42,17 +42,14 @@ namespace Vidly.Controllers
 
         public ActionResult Index(int? pageIndex, string sortBy)
         {
-            if (!pageIndex.HasValue)
-            {
-                pageIndex = 1;
-            }
 
-            if (String.IsNullOrEmpty(sortBy))
+            var movies = new List<Movie>
             {
-                sortBy = "name";
-            }
+                new Movie { Name = "Shrek" },
+                new Movie { Name = "Wall-e" }
+            };
 
-            return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+            return View(movies);
         }
     }
 
