@@ -40,7 +40,7 @@ namespace Vidly.Controllers
             return Content($"id = {id}");
         }
 
-        public ActionResult Index(int? pageIndex, string sortBy)
+        public ActionResult Index()
         {
 
             var movies = new List<Movie>
