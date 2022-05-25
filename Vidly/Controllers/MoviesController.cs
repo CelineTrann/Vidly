@@ -48,11 +48,6 @@ namespace Vidly.Controllers
             return Content($"{year}/{month}");
         }
 
-        public ActionResult Edit(int id)
-        {
-            return Content($"id = {id}");
-        }
-
         public ActionResult Index()
         {
             var movies = _context.Movies.Include(g => g.Genre).ToList();
@@ -77,12 +72,27 @@ namespace Vidly.Controllers
             {
                 Genre = _context.Genres.ToList()
             };
-            return View(viewModel);
+            return View("MovieForm", viewModel);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.Single(m => m.Id == id);
+            if (movie == null)
+                return HttpNotFound();
+
+            var viewModel = new MovieFormViewModel
+            {
+                Movie = movie,
+                Genre = _context.Genres.ToList()
+            };
+            return View("MovieForm", viewModel);
         }
 
         [HttpPost]
         public ActionResult Create(Movie movie)
         {
+            movie.DateAdded = DateTime.Now;
             _context.Movies.Add(movie);
 
             _context.SaveChanges();
