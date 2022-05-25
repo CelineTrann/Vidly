@@ -80,6 +80,14 @@ namespace Vidly.Controllers
             return View(viewModel);
         }
 
+        [HttpPost]
+        public ActionResult Create(Movie movie)
+        {
+            _context.Movies.Add(movie);
+
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Movies");
+        }
     }
 
 
