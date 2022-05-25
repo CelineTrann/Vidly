@@ -34,9 +34,15 @@ namespace Vidly.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(NewCustomerViewModel viewModel)
+        public ActionResult Create(Customer customer)
         {
-            return View();
+            // Change is tracked to db, not persisted
+            _context.Customers.Add(customer);
+
+            //Change is persisted into db, by looking at changes, creating sql queries and then running them as runtime
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Customers");
         }
 
         // GET: Customers
