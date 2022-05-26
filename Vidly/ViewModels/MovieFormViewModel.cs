@@ -34,7 +34,7 @@ namespace Vidly.ViewModels
         {
             get
             {
-                return Id != 0 ? "Edit Movie" : "New Movie";
+                return (Id != null && Id.Value != 0) ? "Edit Movie" : "New Movie";
             }
         }
 
