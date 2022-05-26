@@ -229,6 +229,18 @@
     <Compile Include="Migrations\202205241944207_AddToGenre.designer.cs">
       <DependentUpon>202205241944207_AddToGenre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205252101483_membershipTypeIdChange.cs" />
+    <Compile Include="Migrations\202205252101483_membershipTypeIdChange.designer.cs">
+      <DependentUpon>202205252101483_membershipTypeIdChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205252105035_membershipTypeByte.cs" />
+    <Compile Include="Migrations\202205252105035_membershipTypeByte.designer.cs">
+      <DependentUpon>202205252105035_membershipTypeByte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205261344288_changeMembershipType.cs" />
+    <Compile Include="Migrations\202205261344288_changeMembershipType.designer.cs">
+      <DependentUpon>202205261344288_changeMembershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -384,6 +396,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205241944207_AddToGenre.resx">
       <DependentUpon>202205241944207_AddToGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205252101483_membershipTypeIdChange.resx">
+      <DependentUpon>202205252101483_membershipTypeIdChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205252105035_membershipTypeByte.resx">
+      <DependentUpon>202205252105035_membershipTypeByte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205261344288_changeMembershipType.resx">
+      <DependentUpon>202205261344288_changeMembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
