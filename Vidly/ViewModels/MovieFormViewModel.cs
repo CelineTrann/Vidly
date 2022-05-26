@@ -16,6 +16,8 @@ namespace Vidly.ViewModels
         [Required]
         public string Name { get; set; }
 
+        [Required]
+        [Display(Name = "Genre")]
         public int? GenreId { get; set; }
 
         [Required]
