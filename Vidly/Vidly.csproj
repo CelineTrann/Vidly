@@ -241,6 +241,18 @@
     <Compile Include="Migrations\202205261344288_changeMembershipType.designer.cs">
       <DependentUpon>202205261344288_changeMembershipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205261824202_changeToByte.cs" />
+    <Compile Include="Migrations\202205261824202_changeToByte.designer.cs">
+      <DependentUpon>202205261824202_changeToByte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205261831396_updateTypeMovie.cs" />
+    <Compile Include="Migrations\202205261831396_updateTypeMovie.designer.cs">
+      <DependentUpon>202205261831396_updateTypeMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205261835062_undoMovieChanges.cs" />
+    <Compile Include="Migrations\202205261835062_undoMovieChanges.designer.cs">
+      <DependentUpon>202205261835062_undoMovieChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -406,6 +418,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205261344288_changeMembershipType.resx">
       <DependentUpon>202205261344288_changeMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205261824202_changeToByte.resx">
+      <DependentUpon>202205261824202_changeToByte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205261831396_updateTypeMovie.resx">
+      <DependentUpon>202205261831396_updateTypeMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205261835062_undoMovieChanges.resx">
+      <DependentUpon>202205261835062_undoMovieChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
