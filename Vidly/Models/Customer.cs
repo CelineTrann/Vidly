@@ -13,6 +13,7 @@ namespace Vidly.Models
         [Required(ErrorMessage = "Please enter customer's name")]
         [StringLength(255)]
         public string Name { get; set; }
+
         public bool IsSubscribedToNewLetter { get; set; }
 
         public MembershipType MembershipType { get; set; }
