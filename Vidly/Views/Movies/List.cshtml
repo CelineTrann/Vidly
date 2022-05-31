@@ -4,7 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@Html.ActionLink("New Movie", "New", "Movies", null, new { @class = "btn btn-primary" })
+<h2>Movies</h2>
+
+<p>
+    @Html.ActionLink("New Movie", "New", "Movies", null, new { @class = "btn btn-primary" })
+</p>
 
 <table id="movies" class="table table-bordered table-hover">
     <thead>
@@ -46,8 +50,8 @@
                 ]
             });
 
-            $("#movies").on("click", ".js-delete",function () {
-                var button = $(this); 
+            $("#movies").on("click", ".js-delete", function () {
+                var button = $(this);
 
                 bootbox.confirm("Are you sure you want to delete this movie?", function (result) {
                     if (result) {
@@ -55,7 +59,7 @@
                             url: "/api/movies/" + button.attr("data-movie-id"),
                             method: "DELETE",
                             success: function () {
-                                table.row(button.parents("tr")).remove().draw();  
+                                table.row(button.parents("tr")).remove().draw();
                             }
                         });
 
