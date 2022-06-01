@@ -22,8 +22,11 @@ namespace Vidly.Controllers.Api
         [HttpPost]
         public IHttpActionResult CreateNewRental (NewRentalDto newRental)
         {
-            var customer = _context.Customers.Single(c => c.Id == newRental.CustomerId);
-            var movies = _context.Movies.Where(m => newRental.movieIds.Contains(m.Id)).ToList();
+            var customer = _context.Customers
+                .Single(c => c.Id == newRental.CustomerId);
+
+            var movies = _context.Movies.Where(
+                m => newRental.movieIds.Contains(m.Id));
 
             foreach (var movie in movies)
             {
@@ -35,9 +38,9 @@ namespace Vidly.Controllers.Api
                 };
 
                 _context.Rentals.Add(rental);
-                _context.SaveChanges();             
             }
 
+            _context.SaveChanges();
             return Ok();
 
         }
