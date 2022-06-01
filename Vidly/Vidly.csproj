@@ -309,6 +309,10 @@
     <Compile Include="Migrations\202205311836436_AddPhoneNumberToApplicationUser.designer.cs">
       <DependentUpon>202205311836436_AddPhoneNumberToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206011555028_AddRentalToDomain.cs" />
+    <Compile Include="Migrations\202206011555028_AddRentalToDomain.designer.cs">
+      <DependentUpon>202206011555028_AddRentalToDomain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -318,6 +322,7 @@
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Rental.cs" />
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -676,6 +681,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205311836436_AddPhoneNumberToApplicationUser.resx">
       <DependentUpon>202205311836436_AddPhoneNumberToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206011555028_AddRentalToDomain.resx">
+      <DependentUpon>202206011555028_AddRentalToDomain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
