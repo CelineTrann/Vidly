@@ -18,7 +18,11 @@
             <input id="movie" type="text" value="" class="form-control" />
         </div>
     </div>
-    <ul id="movies" class="list-group"></ul>
+    <div class="row">
+        <div class="col-md-4 col-sm-4">
+            <ul id="movies" class="list-group"></ul>
+        </div>
+    </div>    
     <button class="btn btn-primary">Submit</button>
 </form>
 
@@ -34,7 +38,7 @@
                 datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
                 queryTokenizer: Bloodhound.tokenizers.whitespace,
                 remote: {
-                    url: '/api/customers?queries=%QUERY',
+                    url: '/api/customers?query=%QUERY',
                     wildcard: '%QUERY'
                 }
             });
@@ -43,7 +47,7 @@
                 datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
                 queryTokenizer: Bloodhound.tokenizers.whitespace,
                 remote: {
-                    url: '/api/movies?queries=%QUERY',
+                    url: '/api/movies?query=%QUERY',
                     wildcard: '%QUERY'
                 }
             });
